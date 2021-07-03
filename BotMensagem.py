@@ -5,7 +5,7 @@ from webdriver_manager import chrome
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
 
-# Navegar até o whatsapp
+# Navegar até o whatsapp 
 driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get('https://web.whatsapp.com')
 time.sleep(3)
@@ -23,6 +23,7 @@ def buscar_contato(contato):
 def enviar_mensagem(mensagem):
     campo_mensagem = driver.find_elements_by_xpath('//div[contains(@class,"copyable-text selectable-text")]')
     campo_mensagem[1].click()
+    
     # time.sleep(3)
     campo_mensagem[1].send_keys(mensagem)
     campo_mensagem[1].send_keys(mensagem)
